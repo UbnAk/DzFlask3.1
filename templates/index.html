@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+</head>
+
+<body>
+    <h1>Хаю-хай!</h1>
+    <div>
+        {% for book in books %}
+        <p>
+            Название книги: {{ book.name_b }}<br>
+            Год издания: {{ book.year }}<br>
+            Количество экземпляров: {{ book.copiens }}<br>
+            Автор: {{ book.authors.name_author }} {{ book.authors.last_name }}
+        </p>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
